@@ -7,23 +7,16 @@
 With **npm** or **yarn**:
 
 ```
-yarn install react-native-sensors
-
 npm install react-native-stabilized-view
 yarn install react-native-stabilized-view
 ```
 
 then run to install sensor library:
 
-```bash
+```
 npx react-native link
-# or
-react-native link react-native-sensors
-
-# for ios
-cd ios
-pod install
-
+or
+react-native link
 ```
 
 ## Usage
@@ -48,13 +41,14 @@ return (
 
 ### API/props
 
-| **prop**         | **type**             | default |
-| ---------------- | -------------------- | ------- |
-| `viewWidth`      | `string` or `number` | '100%'  |
-| `viewHeight`     | `string` or `number` | '100%'  |
-| `containerStyle` | style Object         | -       |
-| `updateInterval` | `number`             | -       |
-| `children`       | React component      | -       |
+| **prop**              | **type**             | default |
+| --------------------- | -------------------- | ------- |
+| `viewWidth`           | `string` or `number` | '100%'  |
+| `viewHeight`          | `string` or `number` | '100%'  |
+| `containerStyle`      | style Object         | -       |
+| `updateInterval`      | `number`             | 100     |
+| `translateMultiplier` | `number`             | 50      |
+| `children`            | React component      | -       |
 
 ## Contributing
 
