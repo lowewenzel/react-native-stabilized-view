@@ -7,16 +7,23 @@
 With **npm** or **yarn**:
 
 ```
+yarn install react-native-sensors
+
 npm install react-native-stabilized-view
 yarn install react-native-stabilized-view
 ```
 
 then run to install sensor library:
 
-```
+```bash
 npx react-native link
-or
-react-native link
+# or
+react-native link react-native-sensors
+
+# for ios
+cd ios
+pod install
+
 ```
 
 ## Usage
