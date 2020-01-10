@@ -1,6 +1,6 @@
 {
   "name": "react-native-stabilized-view",
-  "version": "0.0.1",
+  "version": "0.0.10",
   "private": false,
   "description": "A custom React Native View wrapper that counters device shakes with more shakes.",
   "main": "index.js",
@@ -9,8 +9,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/github_account/react-native-stabilized-view.git",
-    "baseUrl": "https://github.com/github_account/react-native-stabilized-view"
+    "url": "git+https://github.com/lowewenzel/react-native-stabilized-view.git",
+    "baseUrl": "https://github.com/lowewenzel/react-native-stabilized-view"
   },
   "keywords": [
     "react-native"
