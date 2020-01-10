@@ -1,14 +1,27 @@
 {
-  "name": "intensive",
+  "name": "react-native-stabilized-view",
   "version": "0.0.1",
-  "private": true,
+  "private": false,
+  "description": "A custom React Native View wrapper that counters device shakes with more shakes.",
+  "main": "index.js",
   "scripts": {
-    "android": "react-native run-android",
-    "ios": "react-native run-ios",
-    "start": "react-native start",
-    "test": "jest",
-    "lint": "eslint ."
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/github_account/react-native-stabilized-view.git",
+    "baseUrl": "https://github.com/github_account/react-native-stabilized-view"
+  },
+  "keywords": [
+    "react-native"
+  ],
+  "author": {
+    "name": "Wenzel Lowe",
+    "email": "lowewenzel@gmail.com"
+  },
+  "license": "MIT",
+  "licenseFilename": "LICENSE",
+  "readmeFilename": "README.md",
   "dependencies": {
     "lpf": "^1.0.0",
     "react": "16.9.0",
