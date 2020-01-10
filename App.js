@@ -8,7 +8,9 @@ const App = () => {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        <StabilizedView />
+        <StabilizedView>
+          <Text>Yo yo yo </Text>
+        </StabilizedView>
       </SafeAreaView>
     </>
   );

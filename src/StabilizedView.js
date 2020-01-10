@@ -1,44 +1,45 @@
 import React, {useState, useEffect} from 'react';
-import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
+import {View, StyleSheet} from 'react-native';
 import {
-  accelerometer,
+  gyroscope,
   setUpdateIntervalForType,
   SensorTypes,
 } from 'react-native-sensors';
-import {map, filter} from 'rxjs/operators';
-
 import lpf from 'lpf';
 
-setUpdateIntervalForType(SensorTypes.accelerometer, 1);
+// Sensor data interval
+setUpdateIntervalForType(SensorTypes.gyroscope, 300);
+
+// Low Pass filter needs to be initialized to stabilize data around 0,0
 lpf.init([0, 0, 0, 0, 0]);
 
 const styles = StyleSheet.create({
   root: {
-    height: 400,
-    width: '100%',
     display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
   },
+
+  // root: {
+  //   width: '100%',
+  //   display: 'flex',
+  //   flexDirection: 'column',
+  //   justifyContent: 'center',
+  // },
   text: {
     textAlign: 'center',
   },
 });
 
-const StabilizedView = ({}) => {
+const StabilizedView = ({
+  viewWidth = '100%',
+  viewHeight = '100%',
+  children,
+}) => {
   const [position, setPosition] = useState({x: 0, y: 0});
-  const [resetPos, setResetPos] = useState({x: 0, y: 0});
 
   useEffect(() => {
-    accelerometer
-      .pipe(
-        map(({x, y, z}) => x + y + z),
-        filter(speed => speed > 0),
-      )
-      .subscribe(speed => {
-        console.log(speed);
-        setPosition({x: lpf.next(speed)});
-      });
+    gyroscope.subscribe(({x, y, z}) => {
+      setPosition({x: position.x + lpf.next(x), y: position.y + lpf.next(y)});
+    });
     // accelerometer.subscribe(({x, y}) =>
     //   setPosition({x: lpf.next(x) - resetPos.x, y: lpf.next(y) - resetPos.y}),
     // );
@@ -47,16 +48,17 @@ const StabilizedView = ({}) => {
   }, []);
 
   return (
-    <View style={{display: 'flex', flexDirection: 'column'}}>
-      <Text>x: {position.x}</Text>
-      <Text>y: {position.y}</Text>
-      <View
+    <View style={[styles.root, {width: viewWidth, height: viewHeight}]}>
+      {children}
+      {/* <Text>x: {position.x.toFixed(2)}</Text> */}
+      {/* <Text>y: {position.y.toFixed(2)}</Text> */}
+      {/* <View
         style={[
           styles.root,
           {
             transform: [
-              {rotateY: `${position.x * 100}deg`},
-              {rotateX: `${position.y * 100}deg`},
+              {translateX: position.x * 10},
+              {translateY: position.y * 10},
             ],
           },
         ]}>
@@ -67,16 +69,7 @@ const StabilizedView = ({}) => {
           you get from the accelerometer and the techniques to get the velocity
           and position from the acceleration values.
         </Text>
-      </View>
-      <View style={{backgroundColor: '#333'}}>
-        <TouchableOpacity
-          style={{width: '100%', height: 30}}
-          onPress={() => {
-            setResetPos({x: position.x, y: position.y});
-          }}>
-          <Text style={{color: 'white'}}>Reset</Text>
-        </TouchableOpacity>
-      </View>
+      </View> */}
     </View>
   );
 };
