@@ -41,11 +41,13 @@ return (
 
 ### API/props
 
-| **prop**     | **type**             | default |
-| ------------ | -------------------- | ------- |
-| `viewWidth`  | `string` or `number` | '100%'  |
-| `viewHeight` | `string` or `number` | '100%'  |
-| `children`   | React component      | -       |
+| **prop**         | **type**             | default |
+| ---------------- | -------------------- | ------- |
+| `viewWidth`      | `string` or `number` | '100%'  |
+| `viewHeight`     | `string` or `number` | '100%'  |
+| `containerStyle` | style Object         | -       |
+| `updateInterval` | `number`             | -       |
+| `children`       | React component      | -       |
 
 ## Contributing
 

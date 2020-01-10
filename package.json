@@ -13,7 +13,6 @@
     "lpf": "^1.0.0",
     "react": "16.9.0",
     "react-native": "0.61.5",
-    "react-native-sensor-fusion": "^0.0.4",
     "react-native-sensors": "^5.3.3",
     "rxjs": "^6.5.4"
   },
@@ -21,6 +20,7 @@
     "@babel/core": "^7.7.7",
     "@babel/runtime": "^7.7.7",
     "@react-native-community/eslint-config": "^0.0.6",
+    "@react-native-community/eslint-plugin": "^1.0.0",
     "babel-jest": "^24.9.0",
     "eslint": "^6.8.0",
     "jest": "^24.9.0",

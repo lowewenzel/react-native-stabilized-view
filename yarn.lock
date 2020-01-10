@@ -949,6 +949,11 @@
     eslint-plugin-react-native "3.8.1"
     prettier "1.17.0"
 
+"@react-native-community/eslint-plugin@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@react-native-community/eslint-plugin/-/eslint-plugin-1.0.0.tgz#ae9a430f2c5795debca491f15a989fce86ea75a0"
+  integrity sha512-GLhSN8dRt4lpixPQh+8prSCy6PYk/MT/mvji/ojAd5yshowDo6HFsimCSTD/uWAdjpUq91XK9tVdTNWfGRlKQA==
+
 "@types/babel__core@^7.1.0":
   version "7.1.3"
   resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.1.3.tgz#e441ea7df63cd080dfcd02ab199e6d16a735fc30"
@@ -1124,11 +1129,6 @@ acorn@^7.1.0:
   version "7.1.0"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-7.1.0.tgz#949d36f2c292535da602283586c2477c57eb2d6c"
   integrity sha512-kL5CuoXA/dgxlBbVrflsflzQ3PAas7RYZB52NOm/6839iVYJgKMJ3cQJD+t2i5+qFa8h3MDpEOJiS64E8JLnSQ==
-
-ahrs@^1.2.2:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/ahrs/-/ahrs-1.2.2.tgz#a60176cb1cec4b958504996da222eb6e0295f887"
-  integrity sha512-bRTuyuorFnYJlLsdlB/qlmYGFvsA/I4Qf7bz1Hx6iEcPIsEBYFIqWARHoJDS39NwCrtK9AiC1GFtwjAbiKKzeQ==
 
 ajv@^6.10.0, ajv@^6.10.2, ajv@^6.5.5:
   version "6.10.2"
@@ -3834,11 +3834,6 @@ jsx-ast-utils@^2.2.1:
     array-includes "^3.0.3"
     object.assign "^4.1.0"
 
-kalmanjs@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/kalmanjs/-/kalmanjs-1.1.0.tgz#9554566a0a7ca72722d35a23ab05915c0ddba99e"
-  integrity sha512-Gkm2DAKIX8geuDcEJ92e80EmQ6TyIzWBJk6AFk+aDLofQ4G/KoDe1RCY9WMuXFe0NQxsTi7HYh9BVQneOtlvkg==
-
 kind-of@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-1.1.0.tgz#140a3d2d41a36d2efcfa9377b62c24f8495a5c44"
@@ -5106,16 +5101,7 @@ react-is@^16.8.1, react-is@^16.8.4, react-is@^16.9.0:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.12.0.tgz#2cc0fe0fba742d97fd527c42a13bec4eeb06241c"
   integrity sha512-rPCkf/mWBtKc97aLL9/txD8DZdemK0vkA3JMLShjlJB3Pj3s+lpf1KaBzMfQrAmhMQB0n1cU/SUGgKKBCe837Q==
 
-react-native-sensor-fusion@^0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/react-native-sensor-fusion/-/react-native-sensor-fusion-0.0.4.tgz#58796ba7240022651f3259d0de62d01db8a63183"
-  integrity sha512-GTjcsM0ydhXuQ725T7rvCVGUj/eoYm2PZHfV9K22ct2mpbV01LWLhLbwJiZManQFHsgqZT/E6QEcd02HwacUqw==
-  dependencies:
-    ahrs "^1.2.2"
-    kalmanjs "^1.1.0"
-    react-native-sensors "^5.3.2"
-
-react-native-sensors@^5.3.2, react-native-sensors@^5.3.3:
+react-native-sensors@^5.3.3:
   version "5.3.3"
   resolved "https://registry.yarnpkg.com/react-native-sensors/-/react-native-sensors-5.3.3.tgz#5d7fed1f4e6a50114ddd1e1d9cf9d33a0c857ca9"
   integrity sha512-gcOI1de/LfGaMvri9qg3f+Thadr1iyeTVI9yr8kNKubHGyUKNcu/HE41VasSbqL5ELh43zwUN3L/9s16Aec6Yg==
